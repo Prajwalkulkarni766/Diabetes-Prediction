@@ -1,0 +1,65 @@
+# Diabetes Prediction Model
+
+This project implements a Logistic Regression model to predict whether a person has diabetes or not based on certain health features.
+
+## Overview
+
+The dataset used in this project is the **Pima Indians Diabetes Database**, which consists of several medical predictor variables and one target variable, `Outcome`. The goal of the project is to predict whether or not a person has diabetes based on their medical attributes.
+
+## Dataset
+
+The dataset contains the following columns:
+
+1. **Pregnancies**: Number of times pregnant
+2. **Glucose**: Plasma glucose concentration
+3. **BloodPressure**: Diastolic blood pressure
+4. **SkinThickness**: Triceps skinfold thickness
+5. **Insulin**: 2-Hour serum insulin
+6. **BMI**: Body mass index
+7. **DiabetesPedigreeFunction**: Diabetes pedigree function
+8. **Age**: Age of the person
+9. **Outcome**: Class variable (0 = No diabetes, 1 = Has diabetes)
+
+### Source of the dataset:
+The dataset can be found on Kaggle: https://www.kaggle.com/uciml/pima-indians-diabetes-database
+
+## Requirements
+
+Before running the project, make sure you have the following Python libraries installed:
+
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
+
+You can install these dependencies using pip:
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn
+
+
+## Steps
+
+Data Preprocessing:
+
+    The data is loaded using pandas read_csv.
+    The independent variables (X) are separated from the target variable (y).
+    The dataset is split into training and testing sets using train_test_split from scikit-learn.
+
+Feature Scaling:
+
+    The training and testing data are scaled using StandardScaler to normalize the features.
+
+Model Training:
+
+    A logistic regression model is instantiated and trained on the training data.
+
+Model Evaluation:
+
+    The model is evaluated using multiple metrics, including accuracy, precision, recall, and F1 score.
+    A confusion matrix is also generated to show the true positives, false positives, true negatives, and false negatives.
+
+Results:
+
+    The performance metrics are printed after evaluating the model on the test dataset
